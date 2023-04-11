@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Cheems Seminar">
+  <meta name="keywords" content="Cheems Seminar, Segment Anything, ChatGPT">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheems Seminar</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/cheems.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://github.com/Cheems-Seminar">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Seminars
+        </a>
+        <div class="navbar-dropdown">
+          <a class="Cheems 1.0" href="https://github.com/Cheems-Seminar">
+            Cheems Seminar 1.0
+          </a>
+          <a class="Cheems 2.0" href="https://github.com/Cheems-Seminar">
+            Cheems Seminar 2.0
+          </a>
+          <a class="Cheems 3.0" href="https://github.com/Cheems-Seminar">
+            Cheems Seminar 2.0
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <a href="https://github.com/Cheems-Seminar/segment-anything-and-name-it" target="_blank">
+        <img class="nav_logo2" src="./static/images/logo.png" style="width:46em; margin-top:3px">
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Grounded Segment Anything：From Objects to Parts </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+            <a href="https://peizesun.github.io/">Peize Sun</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.shoufachen.com/">Shoufa Chen</a><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="http://luoping.me/">Ping Luo</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">The University of Hong Kong</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal contribution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- arXiv Link. -->
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Cheems-Seminar/segment-anything-and-name-it"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://zhuanlan.zhihu.com/p/620536337"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-zhihu"></i>
+                  </span>
+                  <span>Chinese Blog</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!--##################################   Abstract   ##################################-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <!-- <p>
+            <a href="https://zhuanlan.zhihu.com/p/620536337" style="text-decoration: underline">[Chinese Blog]</a> &emsp;
+          <a href="https://github.com/cheems-lab/segment-anything-and-name-it" style="text-decoration: underline">[Github]</a>
+          </p> -->
+          <p>
+            We expand Segment Anything Model (SAM) to support text prompt input. The text prompt could be object-level (eg, dog) and part-level (eg, dog head).  Furthermore，we build a ChatGPT-based dialogue system that flexibly calls various segmentation models when receiving instructions in the form of natural language.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">1. Motivate</h2>
+        <div class="content has-text-justified">
+          <p>
+            From last year's ChatGPT to this year's GPT-4, the entire AI world is in the carnival of NLP and multimodality.
+             As for the CV community, the Segment Anything Model (SAM) is one of the few recent works that catches the eye:
+              huge amount of data, various point/box/mask prompts, fluent demo experience, and amazing generalization ability.
+               However, SAM also has a little drawback: text prompt is not supported in its open source code,
+                although its paper mentions that text prompt has been achieved. 
+          </p>
+          <p>
+           We believe that the reason that text prompt is not released in the open source code is not because the FAIR author team keeps it secret,
+           but that the text prompt is too ambiguous to be properly displayed in the demo, especially in the open world.
+           For SAM project, pushing class-agnostic segmentation quality to unprecedented heights is sufficiently surprising, while the text prompt needs to open a new group to discuss it.  From this point of view, SAM does not end CV, but clears the obstacles effect of segmentation tasks on the subsequent recognition tasks and creates a greater imagination for visual recognition tasks and vision-language multimodal tasks.
+            So the next step is to Segment Anything and Name It!
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--##################################   Abstract   ##################################-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">2. Method: Segment Anything and Name It</h2>
+        <div class="content has-text-justified">
+          <h3 class="title is-4">2.1 A straightforward method: SAM + CLIP R-CNN</h3>
+          <p>
+            Enabling SAM to realize category recognition, the most straightforward implementation is combine SAM and CLIP, that is, SAM provides region proposals, and then crops out their corresponding image patches from the original image (usually slightly enlarged the region by 1.5-2 times to obtain the surrounding environment information), and then sends these image patches to CLIP(Contrastive Language-Image Pre-Training) for classification. The core idea of this implementation inherits R-CNN: R-CNN adopts the traditional region proposal extraction method such as selective search; this implementation takes the output of SAM as proposals. R-CNN's classification is on closed sets; this implementation is open-set classification.  In issue#6 of SAM's github repo, multiple community members implement this solution. 
+          </p>
+          <h3 class="title is-4">2.2 A fast method: SAM + CLIP Fast R-CNN</h3>
+          <p>
+            Considering the development from R-CNN to Fast R-CNN, SAM + CLIP can have a more efficient implementation: all region proposals provided by SAM share one feature map, such that the image only goes through CLIP once. Code implementation: sam_clip_fast_rcnn. This implementation works well in many scenarios. This is due to: (1) SAM provides high-quality region proposals, (2) CLIP itself has region classification capability to some extent, especially the large model version of CLIP.
+          </p>
+          <h3 class="title is-4">2.3 A practical method: Open-Vocabulary Object Detection + SAM</h3>
+          <p>
+            A practical solution is to use the classification module of the Open-Vocabulary Object Detection (OVOD) model to classify the mask output by the SAM. Another similar solution is to send the box output of OVOD as a prompt to SAM to get the mask. The core difference between these two solutions lies on which model region proposals come from. In terms of the final recognition result, using the region proposals extracted by OVOD itself or the region proposals provided by SAM should be simliar. This is because the bottleneck lies in the recognition module of OVOD: its recognition ability on the region proposals that have not been extracted by itself should be very weak. Even if SAM provides more diverse proposals, OVOD cannot recognize them.
+          </p>
+
+          <p>
+            There are many excellent implementations of OVOD+SAM in the community, such as: Grounded SAM based on Grounded DINO and SAM. Learning from these open source solutions, we build a solution based on GLIP(Grounded language-image pre-training). Code implementation: demo_glip_sam.
+          </p>
+
+          <p>
+            Compared with the sequential OVOD+SAM, why not train an end-to-end segmentation and recognition model? We think that if the end-to-end model expects to achieve better results than model combinations, the classification module should be trained on the same magnitude of object category labeling data (about 10M) and computing resources(about 256 A100) as SAM. Emmm....
+          </p>
+
+          <div class="container is-max-desktop">
+            <div class="hero-body">
+              <a href="https://github.com/Cheems-Seminar/segment-anything-and-name-it" target="_blank">
+                <img class="nav_logo2" src="./static/images/glip_sam_output_demo2.jpeg" style="width:45em; margin-top:3px">
+              </a>
+            </div>
+          </div>
+
+          <h3 class="title is-4">2.4 An advanced method: Open-Vocabulary Part Detection + SAM</h3>
+          <p>
+            The advantage of SAM over previous segmentation models lies in not only its high-quality segmentation, but also greatly expanding the segmentation ability to fine-grained objects. In other words, segmentation can be performed from object to object parts. Following, if Open-Vocabulary Part Detection models are available, the category recognition for object parts can be realized 
+We happen to be working on a similar project VLPart recently, so its model is integrated with SAM. Code implementation: demo_vlpart_sam. In addition to dog head, dog leg, dog paw, dog nose, etc., can also be successfully segmented and recognized.
+          </p>
+          <div class="container is-max-desktop">
+            <div class="hero-body">
+              <a href="https://github.com/Cheems-Seminar/segment-anything-and-name-it" target="_blank">
+                <img class="nav_logo2" src="./static/images/vlpart_sam_output_twodogs.jpeg" style="width:45em; margin-top:3px">
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">3. ChatBot for Segment Anything and Name It</h2>
+        <div class="content has-text-justified">
+          <p>
+            By the form of natural language, interacting with AI models is the biggest surprise that AI has brought to humans in recent months. Following this trend, we develop a ChatGPT-based dialogue system borrowing from Visual ChatGPT. Our system supports receiving images from users, class-agnostic segmentation, and object-level and part-level segmentation by text prompt. Code implementation: chatbot.
+          </p>
+          <p>
+            The current implementation is to selectively call SAM, GLIP_SAM, or VLPart_SAM according to the user's query. Although it can satisfy various needs, it is obviously not a "unified" solution. A foundation vision model that is able to segment any mask at object-level and part-level and indeed support various point/box/mask/text prompts is the exciting research direction. 
+          </p>
+
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-fullwidth">
+              <a href="https://github.com/Cheems-Seminar/segment-anything-and-name-it" target="_blank">
+                <img class="nav_logo2" src="./static/images/demo_chat_short.gif" style="width:45em; margin-top:3px">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--##################################   Abstract   ##################################-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">4. Exploration</h2>
+        <div class="content has-text-justified">
+          
+          <p>
+            In this blog, we provide a preliminary solution to support Segment Anything Model with text prompts. This birngs to an interesting follow-up question: If a visual model could segment the mask given any text prompt, can it output the caption for any given mask area at the same time? The answer is no perhaps. Finding the corresponding mask area in the image for any text prompt is a discriminative problem, whereas outputting the text description for any mask area is a generative problem, aka, dense caption problem. From the perspective of generative problem, using the dense caption model to build a segment and name anything visual system is a brand new direction compared with this blog. We will continue to explore it. (Maybe in one day, it can be realized by enumerating all possible text prompts)
+          </p>
+
+          <h3 class="title is-4">Acknowledgments</h3>
+          <p>
+            A large part of the code is borrowed from segment-anything, CLIP, GLIP, Grounded-Segment-Anything, Visual ChatGPT. Many thanks for their wonderful work.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- 
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{segrec2023,
+      title =        {Grounded Segment Anything: From Objects to Parts},
+      author =       {Sun, Peize and Chen, Shoufa and Luo, Ping},
+      howpublished = {\url{https://github.com/Cheems-Seminar/segment-anything-and-name-it}},
+      year =         {2023}
+    }
+
+@article{vlpart2023,
+      title   =  {Going Denser with Open-Vocabulary Part Segmentation},
+      author  =  {Sun, Peize and Chen, Shoufa and Zhu, Chenchen and Xiao, Fanyi and Luo, Ping and Xie, Saining and Yan, Zhicheng},
+      journal =  {Under Review},
+      year    =  {2023}
+    }
+</code></pre>
+  </div>
+</section> -->
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <!-- <h3 class="title">Acknowledgements</h3> -->
+          <p>
+            The website template was borrowed from <a href="https://nerfies.github.io/">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
