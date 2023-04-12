@@ -1,2 +1,19 @@
-.DS_store
+__pycache__
+
+_site/
+.jekyll-cache/
+
+Gemfile.lock
+
+# editor settings
 .idea
+.vscode
+_darcs
+.DS_Store
+
+
+# Editor temporaries
+*.swn
+*.swo
+*.swp
+*~
