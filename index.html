@@ -83,7 +83,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <a href="https://github.com/Cheems-Seminar/segment-anything-and-name-it" target="_blank">
+      <a href="https://github.com/Cheems-Seminar/grounded-segment-any-parts" target="_blank">
         <img class="nav_logo2" src="./static/images/logo.png" style="width:46em; margin-top:3px">
       </a>
     </div>
@@ -121,7 +121,7 @@
 
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/Cheems-Seminar/segment-anything-and-name-it"
+                <a href="https://github.com/Cheems-Seminar/grounded-segment-any-parts"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -205,7 +205,7 @@
           </p>
           <h3 class="title is-4">2.2 A fast method: SAM + CLIP Fast R-CNN</h3>
           <p>
-            Considering the development from R-CNN to Fast R-CNN, SAM + CLIP can have a more efficient implementation: all region proposals provided by SAM share one feature map, such that the image only goes through CLIP once. Code implementation: <a href="https://github.com/Cheems-Seminar/segment-anything-and-name-it/tree/main/demo">sam_clip_fast_rcnn</a>. This implementation works well in many scenarios. This is due to: (1) SAM provides high-quality region proposals, (2) CLIP itself has region classification capability to some extent, especially the large model version of CLIP.
+            Considering the development from R-CNN to Fast R-CNN, SAM + CLIP can have a more efficient implementation: all region proposals provided by SAM share one feature map, such that the image only goes through CLIP once. Code implementation: <a href="https://github.com/Cheems-Seminar/grounded-segment-any-parts/tree/main/demo">sam_clip_fast_rcnn</a>. This implementation works well in many scenarios. This is due to: (1) SAM provides high-quality region proposals, (2) CLIP itself has region classification capability to some extent, especially the large model version of CLIP.
           </p>
           <h3 class="title is-4">2.3 A practical method: Open-Vocabulary Object Detection + SAM</h3>
           <p>
@@ -213,7 +213,7 @@
           </p>
 
           <p>
-            There are many excellent implementations of OVOD+SAM in the community, such as: <a href="https://github.com/IDEA-Research/Grounded-Segment-Anything">Grounded SAM</a> based on Grounded DINO and SAM. Learning from these open source solutions, we build a solution based on <a href="https://github.com/microsoft/GLIP">GLIP(Grounded language-image pre-training)</a>. Code implementation: <a href="https://github.com/Cheems-Seminar/segment-anything-and-name-it/blob/main/demo_glip_sam.py">demo_glip_sam</a>.
+            There are many excellent implementations of OVOD+SAM in the community, such as: <a href="https://github.com/IDEA-Research/Grounded-Segment-Anything">Grounded SAM</a> based on Grounded DINO and SAM. Learning from these open source solutions, we build a solution based on <a href="https://github.com/microsoft/GLIP">GLIP(Grounded language-image pre-training)</a>. Code implementation: <a href="https://github.com/Cheems-Seminar/grounded-segment-any-parts/blob/main/demo_glip_sam.py">demo_glip_sam</a>.
           </p>
 
           <p>
@@ -222,7 +222,7 @@
 
           <div class="container is-max-desktop">
             <div class="hero-body">
-              <a href="https://github.com/Cheems-Seminar/segment-anything-and-name-it" target="_blank">
+              <a href="https://github.com/Cheems-Seminar/grounded-segment-any-parts" target="_blank">
                 <img class="nav_logo2" src="./static/images/glip_sam_output_demo2.jpeg" style="width:45em; margin-top:3px">
               </a>
             </div>
@@ -234,11 +234,11 @@
           </p>
           
           <p>
-            We happen to be working on a similar project VLPart recently, so its model is integrated with SAM. Code implementation: <a href="https://github.com/Cheems-Seminar/segment-anything-and-name-it/blob/main/demo_vlpart_sam.py">demo_vlpart_sam</a>. In addition to dog head, dog leg, dog paw, dog nose, etc., can also be successfully segmented and recognized.
+            We happen to be working on a similar project VLPart recently, so its model is integrated with SAM. Code implementation: <a href="https://github.com/Cheems-Seminar/grounded-segment-any-parts/blob/main/demo_vlpart_sam.py">demo_vlpart_sam</a>. In addition to dog head, dog leg, dog paw, dog nose, etc., can also be successfully segmented and recognized.
           </p>
           <div class="container is-max-desktop">
             <div class="hero-body">
-              <a href="https://github.com/Cheems-Seminar/segment-anything-and-name-it" target="_blank">
+              <a href="https://github.com/Cheems-Seminar/grounded-segment-any-parts" target="_blank">
                 <img class="nav_logo2" src="./static/images/vlpart_sam_output_twodogs.jpeg" style="width:45em; margin-top:3px">
               </a>
             </div>
@@ -262,7 +262,7 @@
         <h2 class="title is-3">3. A ChatBot for Grounded Segment Anything：Objects and Parts</h2>
         <div class="content has-text-justified">
           <p>
-            By the form of natural language, interacting with AI models is the biggest surprise that AI has brought to humans in recent months. Following this trend, we develop a ChatGPT-based dialogue system borrowing from <a href="https://github.com/microsoft/visual-chatgpt">Visual ChatGPT</a>. Our system supports receiving images from users, class-agnostic segmentation, and object-level and part-level segmentation by text prompt. Code implementation: <a href="https://github.com/Cheems-Seminar/segment-anything-and-name-it/blob/main/chatbot.py">chatbot</a>.
+            By the form of natural language, interacting with AI models is the biggest surprise that AI has brought to humans in recent months. Following this trend, we develop a ChatGPT-based dialogue system borrowing from <a href="https://github.com/microsoft/visual-chatgpt">Visual ChatGPT</a>. Our system supports receiving images from users, class-agnostic segmentation, and object-level and part-level segmentation by text prompt. Code implementation: <a href="https://github.com/Cheems-Seminar/grounded-segment-any-parts/blob/main/chatbot.py">chatbot</a>.
           </p>
           <p>
             The current implementation is to selectively call SAM, GLIP_SAM, or VLPart_SAM according to the user's query. Although it can satisfy various needs, it is obviously not a "unified" solution. A foundation vision model that is able to segment any mask at object-level and part-level and indeed support various point/box/mask/text prompts is the exciting research direction. 
@@ -271,7 +271,7 @@
 
           <div class="columns is-centered has-text-centered">
             <div class="column is-fullwidth">
-              <a href="https://github.com/Cheems-Seminar/segment-anything-and-name-it" target="_blank">
+              <a href="https://github.com/Cheems-Seminar/grounded-segment-any-parts" target="_blank">
                 <img class="nav_logo2" src="./static/images/demo_chat_short.gif" style="width:45em; margin-top:3px">
               </a>
             </div>
@@ -318,7 +318,7 @@
     <pre><code>@misc{segrec2023,
       title =        {Grounded Segment Anything: From Objects to Parts},
       author =       {Sun, Peize and Chen, Shoufa and Luo, Ping},
-      howpublished = {\url{https://github.com/Cheems-Seminar/segment-anything-and-name-it}},
+      howpublished = {\url{https://github.com/Cheems-Seminar/grounded-segment-any-parts}},
       year =         {2023}
     }
 
