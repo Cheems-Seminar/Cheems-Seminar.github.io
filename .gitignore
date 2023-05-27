@@ -11,6 +11,9 @@ Gemfile.lock
 _darcs
 .DS_Store
 
+# ipython/jupyter notebooks
+*.ipynb
+**/.ipynb_checkpoints/
 
 # Editor temporaries
 *.swn
